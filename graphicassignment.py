@@ -19,7 +19,6 @@ def get_random_image_size(video_path):
     return (image_width, image_height)
 
 def get_random_position(video_path, image_size):
-    # 获取视频大小
     video = cv2.VideoCapture(video_path)
     _, frame = video.read()
     video_width = frame.shape[1]
@@ -67,7 +66,6 @@ def insert_image_in_video(video_path, image_path, output_path, start_time):
     position = get_random_position(video_path, target_size)
     position_str = f"{position[0]}:{position[1]}"
     
-    # 使用FFmpeg命令将调整后的图片插入视频
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     command = f'ffmpeg -i {video_path} -i {resized_image_path} -filter_complex "overlay={position_str}" -c:a copy -y -ss {start_time} {output_path}'
     
@@ -79,13 +77,13 @@ def insert_image_in_video(video_path, image_path, output_path, start_time):
 
 start_time = '00:00:00' 
 
-video_file = open('/mnt/data/xiao/code/auto/boost/train_few_shot.txt', 'r')
+video_file = open('./few_shot.txt', 'r') # filelist
 video_paths = video_file.readlines()
 random.shuffle(video_paths)
 video_file.close()
 
 
-image_folder = '/mnt/data/xiao/code/auto/boost/pic/低级形状'  # 指定图片所在的文件夹路径
+image_folder = './partial_mask/graphic'  
 image_files = [filename for filename in os.listdir(image_folder) if filename.endswith(('.png', '.jpg', '.jpeg'))]
 
 
@@ -96,7 +94,7 @@ for path in video_paths:
     random_image = random.choice(image_files)
     image_path = os.path.join(image_folder, random_image)
     folder = random_image.split('.')[0]
-    destination = os.path.join('/mnt/data/k400few/low', folder, video_name)
+    destination = os.path.join('./graphic_based', folder, video_name)
     insert_image_in_video(video_path, image_path, destination, start_time)
 
 print('finished')
