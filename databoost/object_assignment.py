@@ -68,7 +68,7 @@ random.shuffle(video_paths)
 video_file.close()
 
 
-image_folder = './partial_mask/object'
+image_folder = './mask/object'
 
 subfolders = [os.path.join(image_folder, name) for name in os.listdir(image_folder) if os.path.isdir(os.path.join(image_folder, name))]
 
