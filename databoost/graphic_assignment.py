@@ -66,7 +66,7 @@ random.shuffle(video_paths)
 video_file.close()
 
 
-image_folder = './partial_mask/graphic'  
+image_folder = './mask/graphic'  
 image_files = [filename for filename in os.listdir(image_folder) if filename.endswith(('.png', '.jpg', '.jpeg'))]
 
 
