@@ -1,5 +1,5 @@
 # AAPM
-We provide partial data examples in the subfolder example_data(partial),
-and code section of databoost methods mentioned in the paper in subfolder databoost. 
-All attributes and categories is in the attribute_based_labels.txt
-The whole dataset is available at an anonymous website https://github.com/theAAPM/AAPM
+We provide partial data examples in the subfolder example_data(partial)
+The complete attributes&categories are listed in attribute_based_labels.csv
+Partial code of the databoost methods mentioned in the paper in subfolder databoost
+More details are available at an anonymous account https://github.com/theAAPM/AAPM
