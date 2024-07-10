@@ -13,7 +13,7 @@ More details will be announced after acceptance.
 - Adaptive learning of attributes for video classification
 - Provision of different prototype representations
 
-![Adaptive Attribute-based Prototype Modeling](https://github.com/theAAPM/AAPM/assets/170411243/8e643859-7794-4e1a-b080-7399e41ba0d4)
+![Adaptive Attribute-based Prototype Modeling](https://github.com/theAAPM/AAPM/assets/170411243/6eb08b07-66ce-40aa-b4b7-790d483ac76c)
 
 ## Getting Started
 
